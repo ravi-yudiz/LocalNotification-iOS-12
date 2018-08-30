@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notification View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" userLabel="Notification View Controller" customClass="NotificationViewController" customModule="NotificationController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0mU-Lq-xmN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E7d-43-vsi">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="105"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJg-2B-Qcs">
+                                <rect key="frame" x="0.0" y="105" width="157.5" height="45"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="bCj-h8-mFA"/>
+                                </constraints>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnPlayTapped:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="GWd-Hl-RdQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFo-fs-x1t">
+                                <rect key="frame" x="162.5" y="105" width="157.5" height="45"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Pause">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnPauseTapped:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="hxj-AO-Q2x"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="E7d-43-vsi" firstAttribute="top" secondItem="Z7r-X7-5Ob" secondAttribute="top" id="4hQ-yM-1lN"/>
+                            <constraint firstItem="eFo-fs-x1t" firstAttribute="leading" secondItem="aJg-2B-Qcs" secondAttribute="trailing" constant="5" id="8DZ-np-lAd"/>
+                            <constraint firstItem="E7d-43-vsi" firstAttribute="trailing" secondItem="Z7r-X7-5Ob" secondAttribute="trailing" id="Bnw-k3-EI5"/>
+                            <constraint firstItem="eFo-fs-x1t" firstAttribute="top" secondItem="E7d-43-vsi" secondAttribute="bottom" id="HE7-6B-8wk"/>
+                            <constraint firstItem="E7d-43-vsi" firstAttribute="leading" secondItem="Z7r-X7-5Ob" secondAttribute="leading" id="IC4-GC-jLW"/>
+                            <constraint firstItem="Z7r-X7-5Ob" firstAttribute="bottom" secondItem="eFo-fs-x1t" secondAttribute="bottom" id="WlR-Hj-ab2"/>
+                            <constraint firstItem="aJg-2B-Qcs" firstAttribute="leading" secondItem="Z7r-X7-5Ob" secondAttribute="leading" id="a95-Ew-C6A"/>
+                            <constraint firstItem="eFo-fs-x1t" firstAttribute="width" secondItem="aJg-2B-Qcs" secondAttribute="width" id="dan-cX-hKQ"/>
+                            <constraint firstItem="Z7r-X7-5Ob" firstAttribute="bottom" secondItem="aJg-2B-Qcs" secondAttribute="bottom" id="jT5-QC-mFx"/>
+                            <constraint firstItem="eFo-fs-x1t" firstAttribute="height" secondItem="aJg-2B-Qcs" secondAttribute="height" id="mPi-Cu-WAE"/>
+                            <constraint firstItem="aJg-2B-Qcs" firstAttribute="top" secondItem="E7d-43-vsi" secondAttribute="bottom" id="sKx-k7-WKs"/>
+                            <constraint firstItem="Z7r-X7-5Ob" firstAttribute="trailing" secondItem="eFo-fs-x1t" secondAttribute="trailing" id="vmQ-j3-pIn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Z7r-X7-5Ob"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="150"/>
+                    <connections>
+                        <outlet property="viewPlayer" destination="E7d-43-vsi" id="LBb-xx-SWE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="220.80000000000001" y="-34.182908545727138"/>
+        </scene>
+    </scenes>
+</document>

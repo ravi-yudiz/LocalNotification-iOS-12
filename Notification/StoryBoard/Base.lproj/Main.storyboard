@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XOf-Lf-r2p">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Local Notification-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LocalNotification" customModule="Notification" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oho-0U-mwB">
+                                <rect key="frame" x="112.5" y="314" width="150" height="150"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="RemoveNotification">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnRemoveNotificationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bDQ-GN-RkJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qok-uK-sYK">
+                                <rect key="frame" x="112.5" y="114" width="150" height="150"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="1B0-Wd-psK"/>
+                                    <constraint firstAttribute="height" constant="150" id="Tgl-Cp-uyr"/>
+                                </constraints>
+                                <state key="normal" title="Create Notification ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnNotificationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="InB-J1-lzT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oho-0U-mwB" firstAttribute="width" secondItem="qok-uK-sYK" secondAttribute="width" id="01r-rL-w8G"/>
+                            <constraint firstItem="oho-0U-mwB" firstAttribute="height" secondItem="qok-uK-sYK" secondAttribute="height" id="a11-zU-tiN"/>
+                            <constraint firstItem="oho-0U-mwB" firstAttribute="top" secondItem="qok-uK-sYK" secondAttribute="bottom" constant="50" id="dxu-BD-BTJ"/>
+                            <constraint firstItem="oho-0U-mwB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="egu-dX-Z7F"/>
+                            <constraint firstItem="qok-uK-sYK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hvE-oT-qmi"/>
+                            <constraint firstItem="qok-uK-sYK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="oLO-Hk-Vco"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lMR-QZ-RPE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1101.5999999999999" y="85.907046476761622"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SnH-Pa-eTq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XOf-Lf-r2p" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SXl-ST-5cH">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="gGh-bF-ktc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SfB-GO-4JB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="405.60000000000002" y="85.907046476761622"/>
+        </scene>
+    </scenes>
+</document>
